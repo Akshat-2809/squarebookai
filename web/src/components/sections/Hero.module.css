@@ -1,0 +1,85 @@
+.hero { position: relative; padding-block: 64px 104px; overflow: hidden }
+.rules { position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, transparent 0 35px, rgba(42, 59, 216, .07) 35px 36px); -webkit-mask-image: radial-gradient(ellipse 70% 80% at 70% 40%, #000 20%, transparent 75%); mask-image: radial-gradient(ellipse 70% 80% at 70% 40%, #000 20%, transparent 75%) }
+.margin { position: absolute; top: 0; bottom: 0; left: 56%; width: 2px; background: rgba(180, 35, 26, .16); pointer-events: none }
+.glow { position: absolute; width: 520px; height: 520px; right: 4%; top: 6%; border-radius: 50%; background: radial-gradient(circle, rgba(255, 227, 107, .55), transparent 65%); filter: blur(10px); pointer-events: none; animation: breathe 7s ease-in-out infinite alternate }
+.herogrid { position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 56px; align-items: center }
+.herocopy { display: flex; flex-direction: column; gap: 28px }
+.h1 { font-size: clamp(56px, 8.2vw, 124px); line-height: .9; letter-spacing: -.055em; font-weight: 700 }
+.ln { display: block; overflow: hidden; padding-bottom: .16em; margin-bottom: -.08em }
+.ln > span { display: inline-block; animation: up 1s var(--ease) both }
+.ln:nth-child(2) > span { animation-delay: .12s }
+.sub { font-family: var(--disp); font-size: clamp(24px, 2.6vw, 34px); line-height: 1.15; letter-spacing: -.02em; color: var(--ink2); font-weight: 500; animation: fadeup .9s var(--ease) .3s both }
+.sub b { color: var(--ink); font-weight: 600 }
+.herocopy :global(.lede) { animation: fadeup .9s var(--ease) .42s both }
+.ctas { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; animation: fadeup .9s var(--ease) .54s both }
+.ticker { display: flex; align-items: center; gap: 12px; animation: fadeup .9s var(--ease) .66s both }
+.tickwin { height: 24px; overflow: hidden; flex: 1; min-width: 0 }
+.ticklist { display: flex; flex-direction: column; transition: transform .6s var(--ease) }
+.ticklist span { height: 24px; line-height: 24px; font-size: 14px; color: var(--ink2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.ticklist b { font-weight: 600; color: var(--ink) }
+
+/* khata card */
+.stage { position: relative; padding: 28px 0 92px; animation: fadeup 1s var(--ease) .25s both }
+.khata { position: relative; z-index: 2; background: var(--surface); border-radius: 20px; box-shadow: 0 1px 0 var(--line), 0 40px 80px -36px rgba(14, 19, 48, .35), 0 0 0 1px var(--line2); padding: 24px; display: flex; flex-direction: column; gap: 18px; transform: rotate(-1.2deg); transition: transform .6s var(--ease) }
+.khata:hover { transform: rotate(0) translateY(-4px) }
+.khtop { display: flex; align-items: center; gap: 12px }
+.av { width: 42px; height: 42px; border-radius: 12px; background: var(--yellow); display: flex; align-items: center; justify-content: center; font-family: var(--disp); font-weight: 700; font-size: 16px; color: var(--ink); flex: none }
+.khname { display: flex; flex-direction: column; flex: 1; min-width: 0 }
+.khname b { font-weight: 600; font-size: 15.5px }
+.khname span { font-size: 13px; color: var(--ink3) }
+.status { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; padding: 5px 10px; border-radius: 999px; transition: background .4s, color .4s }
+.stOver { background: rgba(180, 35, 26, .09); color: var(--crit) }
+.stDone { background: rgba(15, 122, 75, .11); color: var(--good) }
+.amtwrap { position: relative; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding-block: 6px 4px }
+.amtlab { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink3) }
+.amt { position: relative; font-family: var(--disp); font-weight: 700; font-size: clamp(48px, 5.4vw, 72px); letter-spacing: -.05em; line-height: 1; font-variant-numeric: tabular-nums }
+.amt svg { position: absolute; left: -6%; top: 44%; width: 112%; height: 30px; overflow: visible; pointer-events: none }
+.amt path { fill: none; stroke: var(--blue); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 520; stroke-dashoffset: 520; transition: stroke-dashoffset .7s var(--ease) }
+.strikeOn path { stroke-dashoffset: 0 }
+.chukta { position: absolute; right: -6px; top: -18px; font-family: var(--hand); font-weight: 700; font-size: 44px; color: var(--blue); transform: rotate(-9deg); clip-path: inset(0 100% 0 0); transition: clip-path .9s var(--ease) .35s; line-height: 1 }
+.chuktaOn { clip-path: inset(0 -10% 0 0) }
+.bar { height: 8px; border-radius: 99px; background: var(--line2); overflow: hidden }
+.bar i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--blue), #5B6BFF); transition: width .7s var(--ease) }
+.barmeta { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11.5px; color: var(--ink3); margin-top: -8px }
+.rows { display: flex; flex-direction: column; border-top: 1px dashed var(--line) }
+.row { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 11px 0; border-bottom: 1px dashed var(--line); opacity: .18; filter: grayscale(1); transform: translateX(0); transition: opacity .5s var(--ease), filter .5s, transform .5s var(--ease) }
+.row.in { opacity: 1; filter: none; animation: slidein .55s var(--ease) }
+.ic { width: 34px; height: 34px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 12px; font-weight: 500 }
+.icFix { background: var(--yellow2); color: #7A5A00 }
+.icPay { background: var(--soft); color: var(--blue) }
+.rowt { display: flex; flex-direction: column; min-width: 0 }
+.rowt b { font-weight: 600; font-size: 14.5px }
+.rowt span { font-size: 12.5px; color: var(--ink3) }
+.rowa { font-family: var(--mono); font-size: 14px; color: var(--good); font-variant-numeric: tabular-nums }
+.receipt { position: absolute; z-index: 3; right: -18px; bottom: 6px; width: 230px; background: var(--yellow); border-radius: 4px; padding: 16px 16px 18px; box-shadow: 0 24px 40px -20px rgba(14, 19, 48, .45); transform: translateY(30px) rotate(6deg) scale(.9); opacity: 0; transition: transform .7s var(--ease), opacity .4s; font-family: var(--mono); font-size: 11.5px; color: var(--ink); display: flex; flex-direction: column; gap: 6px }
+.receipt::before { content: ""; position: absolute; left: 0; right: 0; top: -6px; height: 12px; background: radial-gradient(circle at 6px 0, transparent 5px, var(--yellow) 5.5px) 0 0/12px 12px repeat-x }
+.receiptOn { transform: translateY(0) rotate(4deg) scale(1); opacity: 1 }
+.receipt b { font-family: var(--disp); font-size: 24px; letter-spacing: -.03em }
+.float { position: absolute; z-index: 4; background: var(--surface); border-radius: 14px; box-shadow: 0 20px 40px -22px rgba(14, 19, 48, .4), 0 0 0 1px var(--line2); padding: 10px 12px; font-size: 13px; display: flex; align-items: center; gap: 10px }
+.f1 { left: -56px; top: 46%; animation: float 6s ease-in-out infinite alternate, fadeup .8s var(--ease) 1.2s both }
+.f2 { left: -28px; bottom: 18px; animation: float 7s ease-in-out -2s infinite alternate, fadeup .8s var(--ease) 1.5s both }
+.wa { width: 28px; height: 28px; border-radius: 8px; background: #E6F6EE; color: var(--good); display: flex; align-items: center; justify-content: center; flex: none }
+.waClock { background: var(--soft); color: var(--blue) }
+
+@keyframes breathe { to { transform: scale(1.12) translate(-20px, 20px) } }
+@keyframes up { from { transform: translateY(105%) } }
+@keyframes fadeup { from { opacity: 0; transform: translateY(18px) } }
+@keyframes float { to { transform: translateY(-12px) } }
+@keyframes slidein { from { transform: translateX(-12px) } }
+
+@media (max-width: 1000px) {
+  .herogrid { grid-template-columns: minmax(0, 1fr) }
+  .f1 { left: -8px }
+  .f2 { left: 0 }
+  .receipt { right: 0 }
+  .margin { display: none }
+}
+
+@media (max-width: 620px) {
+  .receipt { width: 190px }
+  .f1 { display: none }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .amt path { stroke-dashoffset: 0 }
+}

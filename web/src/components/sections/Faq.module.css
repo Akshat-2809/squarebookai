@@ -1,0 +1,18 @@
+.faq { padding-top: 0 }
+.faqgrid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 64px }
+.head { margin-bottom: 0 }
+.list { border-top: 1.5px solid var(--ink) }
+.q { border-bottom: 1px solid var(--line) }
+/* heading wrapper for a11y only; must not change how the question text wraps */
+.qh { margin: 0; font: inherit; letter-spacing: inherit; text-wrap: wrap }
+.qb { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; background: none; border: 0; cursor: pointer; text-align: left; font: 600 21px var(--disp); letter-spacing: -.015em; color: var(--ink) }
+.qi { flex: none; width: 32px; height: 32px; border-radius: 10px; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); display: flex; align-items: center; justify-content: center; transition: transform .4s var(--ease), background .3s, color .3s; color: var(--ink) }
+.q.open .qi { transform: rotate(45deg); background: var(--blue); color: #fff; box-shadow: none }
+.qa { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s var(--ease) }
+.q.open .qa { grid-template-rows: 1fr }
+.qa > div { overflow: hidden }
+.qa p { padding-bottom: 24px; color: var(--ink2); max-width: 62ch }
+
+@media (max-width: 1000px) {
+  .faqgrid { grid-template-columns: minmax(0, 1fr) }
+}

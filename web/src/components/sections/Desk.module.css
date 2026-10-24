@@ -1,0 +1,93 @@
+.desk { display: grid; grid-template-columns: minmax(0, .62fr) minmax(0, 1.38fr); gap: 32px; align-items: start }
+.tabs { display: flex; flex-direction: column; gap: 6px }
+.tab { text-align: left; display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; border-radius: 14px; border: 0; background: transparent; cursor: pointer; font: inherit; color: var(--ink); transition: background .3s var(--ease), box-shadow .3s }
+.tab:hover { background: var(--surface) }
+.tab .tt { display: flex; justify-content: space-between; align-items: center; font-family: var(--disp); font-weight: 600; font-size: 20px; letter-spacing: -.02em }
+.tab .td { font-size: 14.5px; color: var(--ink2); display: none }
+.tab.on { background: var(--surface); box-shadow: 0 0 0 1px var(--line), 0 18px 36px -24px rgba(14, 19, 48, .3) }
+.tab.on .td { display: block; animation: fadeup .4s var(--ease) both }
+.tab .tn { font-family: var(--mono); font-size: 11px; color: var(--ink3) }
+.tab.on .tn { color: var(--blue) }
+.win { background: var(--surface); border-radius: 20px; box-shadow: 0 0 0 1px var(--line), 0 40px 80px -48px rgba(14, 19, 48, .45); overflow: hidden; min-width: 0 }
+.winbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 18px; border-bottom: 1px solid var(--line2); font-family: var(--mono); font-size: 12px; color: var(--ink3); flex-wrap: wrap }
+.lights { display: flex; gap: 6px }
+.lights i { width: 10px; height: 10px; border-radius: 50%; background: var(--line) }
+.panel { padding: 22px; display: flex; flex-direction: column; gap: 16px; animation: panelin .5s var(--ease) both }
+.panel:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px }
+.sample { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; background: var(--line2); color: var(--ink3) }
+.kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px }
+.kpi { border-radius: 14px; padding: 14px; background: var(--bg); display: flex; flex-direction: column; gap: 2px }
+.kpi small { font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink3) }
+.kpi b { font-family: var(--disp); font-size: 28px; font-weight: 700; letter-spacing: -.03em; font-variant-numeric: tabular-nums }
+.tbl { overflow-x: auto }
+.tr { display: grid; grid-template-columns: 96px minmax(0, 1fr) 84px 140px; gap: 12px; padding: 12px 4px; border-bottom: 1px solid var(--line2); font-size: 14px; align-items: center; min-width: 560px; animation: panelin .45s var(--ease) both }
+.tr:nth-child(2) { animation-delay: .05s }
+.tr:nth-child(3) { animation-delay: .1s }
+.tr:nth-child(4) { animation-delay: .15s }
+.tr:nth-child(5) { animation-delay: .2s }
+.tr.th { font-family: var(--mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink3); animation: none }
+.right { text-align: right }
+.clockpad { padding-top: 20px }
+.clock { position: relative; height: 52px; border-radius: 12px; background: repeating-linear-gradient(90deg, var(--line2) 0 1px, transparent 1px calc(100% / 24)), var(--bg); overflow: visible }
+.allowed { position: absolute; top: 0; bottom: 0; left: 33.333%; width: 45.833%; background: rgba(15, 122, 75, .12); border-inline: 2px solid var(--good); border-radius: 4px; animation: grow .9s var(--ease) both; transform-origin: left }
+.now { position: absolute; top: -8px; bottom: -8px; left: 82.08%; width: 2px; background: var(--crit); animation: blink 1.4s ease-in-out infinite }
+.now::after { content: "19:42"; position: absolute; top: -20px; left: -16px; font-family: var(--mono); font-size: 11px; color: var(--crit) }
+.hours { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11px; color: var(--ink3) }
+.pickwrap { display: flex; flex-direction: column; gap: 10px }
+.pills { display: flex; gap: 8px; flex-wrap: wrap }
+.pill { min-height: 44px; min-width: 72px; padding: 0 16px; border-radius: 12px; border: 0; box-shadow: inset 0 0 0 1.5px var(--line); background: var(--surface); font: 600 14.5px var(--body); color: var(--ink); cursor: pointer; transition: all .25s var(--ease) }
+.pill:hover { box-shadow: inset 0 0 0 1.5px var(--ink) }
+.pill.on { background: var(--ink); color: #fff; box-shadow: none; transform: translateY(-1px) }
+.pl { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px dashed var(--line); font-size: 15px; align-items: center; flex-wrap: wrap }
+.pl b { font-family: var(--disp); font-weight: 700; font-size: 22px; letter-spacing: -.03em; font-variant-numeric: tabular-nums }
+.pl.big b { font-size: 34px; color: var(--blue) }
+.pl.last { border-bottom: 0 }
+.panel .careMsg { background: var(--bg); box-shadow: none; max-width: 100% }
+.log { font-family: var(--mono); font-size: 12.5px }
+.log .pl { font-size: 12.5px; animation: panelin .45s var(--ease) both }
+.log .pl:nth-child(2) { animation-delay: .06s }
+.log .pl:nth-child(3) { animation-delay: .12s }
+.log .pl:nth-child(4) { animation-delay: .18s }
+.log .pl:nth-child(5) { animation-delay: .24s }
+.chart { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 8px; height: 220px }
+.yax { display: flex; flex-direction: column; justify-content: space-between; font-family: var(--mono); font-size: 10.5px; color: var(--ink3); text-align: right; padding-bottom: 20px }
+.plot { position: relative; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 6px; align-items: end; border-bottom: 1.5px solid var(--ink); margin-bottom: 20px; background: linear-gradient(var(--line2), var(--line2)) 0 0/100% 1px no-repeat, linear-gradient(var(--line2), var(--line2)) 0 50%/100% 1px no-repeat }
+.b { background: var(--ink); border-radius: 5px 5px 0 0; opacity: .85; position: relative; animation: rise .8s var(--ease) both; transform-origin: bottom }
+.b:nth-child(2) { animation-delay: .04s }
+.b:nth-child(3) { animation-delay: .08s }
+.b:nth-child(4) { animation-delay: .12s }
+.b:nth-child(5) { animation-delay: .16s }
+.b:nth-child(6) { animation-delay: .2s }
+.b:nth-child(7) { animation-delay: .24s }
+.b:nth-child(8) { animation-delay: .28s }
+.b:nth-child(9) { animation-delay: .32s }
+.b:nth-child(10) { animation-delay: .36s }
+.b:nth-child(11) { animation-delay: .4s }
+.b:nth-child(12) { animation-delay: .44s }
+.b.lastBar { background: var(--blue); opacity: 1 }
+.b span { position: absolute; bottom: -19px; left: 50%; transform: translateX(-50%); font-family: var(--mono); font-size: 9.5px; color: var(--ink3) }
+.intsWrap { display: flex; flex-direction: column; gap: 18px; margin-top: 72px }
+.ints { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent) }
+.track { display: flex; width: max-content; animation: marq 46s linear infinite reverse; gap: 10px }
+.int { padding: 12px 18px; border-radius: 12px; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); font-weight: 600; font-size: 15px; white-space: nowrap; margin-right: 10px }
+/* In the design the hero marquee's `.track span` rules also cascade onto these pills; reproduced as rendered. */
+.track .int { display: inline-flex; align-items: center; gap: 40px; padding-right: 40px; font-family: var(--disp); font-weight: 600; font-size: 22px; letter-spacing: -.02em; color: var(--ink2); white-space: nowrap }
+.track .int::after { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--yellow); box-shadow: 0 0 0 1px rgba(14, 19, 48, .15) }
+
+@keyframes fadeup { from { opacity: 0; transform: translateY(18px) } }
+@keyframes panelin { from { opacity: 0; transform: translateY(14px) } }
+@keyframes grow { from { transform: scaleX(0) } }
+@keyframes rise { from { transform: scaleY(0) } }
+@keyframes blink { 50% { opacity: .35 } }
+@keyframes marq { to { transform: translateX(-50%) } }
+
+@media (max-width: 1000px) {
+  .desk { grid-template-columns: minmax(0, 1fr) }
+  .tabs { flex-direction: row; overflow-x: auto; padding-bottom: 4px }
+  .tab { flex: none }
+  .tab .td { display: none !important }
+}
+
+@media (max-width: 620px) {
+  .kpis { grid-template-columns: minmax(0, 1fr) }
+}

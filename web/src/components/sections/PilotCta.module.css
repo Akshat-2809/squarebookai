@@ -1,0 +1,40 @@
+.ctaband { background: var(--yellow); position: relative; overflow: hidden }
+.ctaband::before { content: ""; position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, transparent 0 35px, rgba(14, 19, 48, .07) 35px 36px); pointer-events: none }
+.cta { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center }
+.copy { display: flex; flex-direction: column; gap: 24px }
+.eyebrowInk { color: var(--ink) }
+.eyebrowInk i { background: var(--ink) }
+.ledeInk { color: var(--ink) }
+.ctah { font-size: clamp(44px, 6vw, 88px); line-height: .92; letter-spacing: -.05em }
+.ctah :global(.hand) { color: var(--ink) }
+.ctah :global(.hand path) { stroke: var(--ink) }
+.form { background: var(--surface); border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 40px 80px -40px rgba(14, 19, 48, .45) }
+.formEl { display: flex; flex-direction: column; gap: 16px }
+.field { display: flex; flex-direction: column; gap: 6px }
+.field label { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink3) }
+.field input, .field select { min-height: 50px; border: 0; box-shadow: inset 0 0 0 1.5px var(--line); border-radius: 12px; padding: 0 14px; font: 16px var(--body); color: var(--ink); background: var(--bg); transition: box-shadow .2s }
+.field input:focus, .field select:focus { box-shadow: inset 0 0 0 2px var(--blue); outline: none }
+.field input[aria-invalid="true"], .field select[aria-invalid="true"] { box-shadow: inset 0 0 0 2px var(--crit) }
+.ferr { font-family: var(--mono); font-size: 12px; color: var(--crit) }
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px }
+.full { width: 100% }
+.full:disabled { cursor: progress; opacity: .85; transform: none }
+.spinner { width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .45); border-top-color: #fff; animation: spin .7s linear infinite }
+.alert { font-size: 14.5px; color: var(--crit); background: rgba(180, 35, 26, .07); border-radius: 12px; padding: 12px 14px }
+.alert:empty { display: none }
+.trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden }
+.slip { background: var(--yellow2); border-radius: 8px; padding: 22px; font-family: var(--mono); font-size: 13px; display: flex; flex-direction: column; gap: 10px; animation: print 1.1s steps(12, end) both }
+.slip b { font-family: var(--disp); font-size: 28px; letter-spacing: -.03em }
+.slip .stamp { align-self: flex-end; font-family: var(--hand); font-weight: 700; font-size: 40px; color: var(--blue); transform: rotate(-8deg); animation: thunk .5s cubic-bezier(.2, 1.6, .4, 1) 1.1s both; line-height: 1 }
+
+@keyframes print { from { clip-path: inset(0 0 100% 0) } to { clip-path: inset(0 0 0 0) } }
+@keyframes thunk { from { transform: rotate(-8deg) scale(1.8); opacity: 0 } }
+@keyframes spin { to { transform: rotate(360deg) } }
+
+@media (max-width: 1000px) {
+  .cta { grid-template-columns: minmax(0, 1fr) }
+}
+
+@media (max-width: 620px) {
+  .two { grid-template-columns: minmax(0, 1fr) }
+}

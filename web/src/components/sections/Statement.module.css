@@ -1,0 +1,11 @@
+.statement { padding-block: 136px 88px }
+.sweep { font-family: var(--disp); font-weight: 600; font-size: clamp(32px, 4.4vw, 62px); line-height: 1.08; letter-spacing: -.035em; max-width: 22ch; view-timeline-name: --sw }
+.sweepIn { color: var(--ink) }
+.sweepIn em { font-style: normal; font-family: var(--hand); font-weight: 700; color: var(--blue); letter-spacing: -.01em }
+
+@supports (animation-timeline: view()) {
+  .sweepIn { color: transparent; background: linear-gradient(90deg, var(--ink) 0 50%, #C5CAE0 50% 100%) 100% 0/200% 100% no-repeat; -webkit-background-clip: text; background-clip: text; animation: sweep linear both; animation-timeline: --sw; animation-range: cover 18% cover 58% }
+  .sweepIn em { -webkit-text-fill-color: currentColor }
+}
+
+@keyframes sweep { to { background-position: 0 0 } }

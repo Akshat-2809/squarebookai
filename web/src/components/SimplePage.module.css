@@ -1,0 +1,6 @@
+.page { padding-block: 96px 120px; min-height: 60vh }
+.inner { display: flex; flex-direction: column; gap: 24px; max-width: 760px }
+.title { font-size: clamp(44px, 6vw, 88px); line-height: .92; letter-spacing: -.05em }
+.body { display: flex; flex-direction: column; gap: 16px; color: var(--ink2) }
+.body a { color: var(--blue) }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px }
