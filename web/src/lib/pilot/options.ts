@@ -6,13 +6,4 @@ export const ACCOUNTS_BANDS = [
   { value: "over-5l", label: "More than 5 lakh" },
 ] as const;
 
-export type AccountsBand = (typeof ACCOUNTS_BANDS)[number]["value"];
-
-export const bandLabel = (value: string) => ACCOUNTS_BANDS.find((b) => b.value === value)?.label ?? value;
-
 export type PilotField = "name" | "email" | "organisation" | "accountsBand";
-
-export type PilotState =
-  | { status: "idle" }
-  | { status: "success"; reference: string }
-  | { status: "error"; message: string; fieldErrors?: Partial<Record<PilotField, string>>; values?: Partial<Record<PilotField, string>> };

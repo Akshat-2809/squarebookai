@@ -27,7 +27,7 @@ const SECTIONS: LegalSection[] = [
         <p>This policy explains how we handle personal data when:</p>
         <ul>
           <li>you visit squarebookai.com (the &ldquo;Website&rdquo;);</li>
-          <li>you request a pilot, write to us, or otherwise deal with us as a prospective or existing customer; and</li>
+          <li>you write to us, or otherwise deal with us as a prospective or existing customer; and</li>
           <li>
             we process information about borrowers and customers on behalf of the banks, NBFCs, utilities and other
             organisations that use Squarebook (&ldquo;Clients&rdquo;).
@@ -51,7 +51,7 @@ const SECTIONS: LegalSection[] = [
       <>
         <h3>When we decide how your data is used</h3>
         <p>
-          For data about Website visitors, people who request a pilot, and contacts at our Clients, suppliers and
+          For data about Website visitors, people who write to us, and contacts at our Clients, suppliers and
           partners, Squarebook decides why and how the data is processed. We act as the <b>Data Fiduciary</b> and this
           policy applies in full.
         </p>
@@ -78,12 +78,14 @@ const SECTIONS: LegalSection[] = [
     title: "Personal data we collect as Data Fiduciary",
     body: (
       <>
+        <h3>The &ldquo;Request a pilot&rdquo; form</h3>
+        <p>
+          The form on the Website does not send or store what you type. It checks your entries in your browser and shows
+          a confirmation on screen, but your name, email, organisation and other details never leave your device and do
+          not reach us. To ask about a pilot, please email us at {mail(CONTACT_EMAIL)}.
+        </p>
         <h3>Data you give us</h3>
         <ul>
-          <li>
-            <b>Pilot requests:</b> your name, work email address, organisation, and the approximate number of accounts
-            your organisation has in collection.
-          </li>
           <li>
             <b>Correspondence and meetings:</b> what you tell us when you email, call or meet us, including your job
             title, phone number and the content of our conversations.
@@ -95,13 +97,6 @@ const SECTIONS: LegalSection[] = [
         </ul>
         <h3>Data collected automatically</h3>
         <ul>
-          <li>
-            <b>IP address:</b> used when you submit a form to prevent spam and abuse. We store it only as a salted,
-            one-way hash, which cannot practically be turned back into your IP address.
-          </li>
-          <li>
-            <b>Browser information:</b> the user-agent string your browser sends when you submit a form.
-          </li>
           <li>
             <b>Server logs:</b> our hosting provider keeps standard request logs (IP address, date and time, page
             requested, browser type) for security and reliability.
@@ -115,7 +110,7 @@ const SECTIONS: LegalSection[] = [
         </p>
         <h3>Data we do not want through the Website</h3>
         <p>
-          We do not ask for, and you should not send through the Website or by email, any sensitive personal data or
+          We do not ask for, and you should not send us by email, any sensitive personal data or
           information under the SPDI Rules (such as passwords, bank account or card details, health information or
           biometric data), or any borrower&apos;s personal data. Borrower data for a pilot is shared only through a
           secure channel agreed in writing with your organisation.
@@ -177,14 +172,9 @@ const SECTIONS: LegalSection[] = [
             </thead>
             <tbody>
               <tr>
-                <td>Respond to your pilot request and arrange next steps</td>
-                <td>Pilot request details, correspondence</td>
+                <td>Reply to your emails about a pilot and arrange next steps</td>
+                <td>Correspondence</td>
                 <td>Your consent, and data you provided voluntarily for that purpose</td>
-              </tr>
-              <tr>
-                <td>Send a confirmation and follow-up emails about your request</td>
-                <td>Name, email, organisation</td>
-                <td>Your consent</td>
               </tr>
               <tr>
                 <td>Enter into and perform contracts with your organisation</td>
@@ -192,8 +182,8 @@ const SECTIONS: LegalSection[] = [
                 <td>Data provided voluntarily for that purpose; performance of a contract</td>
               </tr>
               <tr>
-                <td>Keep the Website secure and prevent spam and abuse</td>
-                <td>Hashed IP address, browser information, server logs</td>
+                <td>Keep the Website secure and reliable</td>
+                <td>Server logs</td>
                 <td>Reasonable security practices required by law</td>
               </tr>
               <tr>
@@ -237,17 +227,7 @@ const SECTIONS: LegalSection[] = [
               <tr>
                 <td>Vercel Inc.</td>
                 <td>Website hosting and delivery</td>
-                <td>Server logs, form submissions in transit</td>
-              </tr>
-              <tr>
-                <td>Neon (Databricks, Inc.)</td>
-                <td>Database hosting for pilot requests</td>
-                <td>Pilot request details, hashed IP, browser information</td>
-              </tr>
-              <tr>
-                <td>Resend (Plus Five Five, Inc.)</td>
-                <td>Sending confirmation and notification emails</td>
-                <td>Name, email, organisation, accounts band</td>
+                <td>Server logs</td>
               </tr>
             </tbody>
           </table>
@@ -277,8 +257,7 @@ const SECTIONS: LegalSection[] = [
           Borrower data that we process for Clients is stored and processed in India.
         </p>
         <p>
-          Some of the service providers listed in section 6 store or process Website and business contact data outside
-          India. The DPDP Law permits such transfers except to countries the Central Government restricts by
+          Our hosting provider, listed in section 6, may process Website server logs outside India. The DPDP Law permits such transfers except to countries the Central Government restricts by
           notification, and we will not transfer personal data to any restricted country. We use providers that commit
           by contract to protect the data to a standard at least equal to Indian law.
         </p>
@@ -292,13 +271,8 @@ const SECTIONS: LegalSection[] = [
       <>
         <ul>
           <li>
-            <b>Pilot requests and related correspondence:</b> for as long as we are discussing a pilot or working with
-            your organisation, and for up to 24 months after our last interaction. After that we delete or anonymise
-            them.
-          </li>
-          <li>
-            <b>Hashed IP addresses and browser information</b> are kept with the pilot request they belong to and
-            deleted with it.
+            <b>Correspondence about a pilot:</b> for as long as we are discussing a pilot or working with your
+            organisation, and for up to 24 months after our last interaction. After that we delete or anonymise it.
           </li>
           <li>
             <b>Server logs</b> are kept by our hosting provider for a short period, typically no more than 30 days.
@@ -329,7 +303,6 @@ const SECTIONS: LegalSection[] = [
         <ul>
           <li>encryption of data in transit (TLS) and at rest;</li>
           <li>access limited to people who need it for their work, with multi-factor authentication and access logs;</li>
-          <li>storing IP addresses only as salted one-way hashes;</li>
           <li>due diligence on, and written contracts with, our service providers; and</li>
           <li>regular review of our security controls.</li>
         </ul>

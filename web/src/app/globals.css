@@ -128,7 +128,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @keyframes blink { 50% { opacity: .35 } }
 @keyframes print { from { clip-path: inset(0 0 100% 0) } to { clip-path: inset(0 0 0 0) } }
 @keyframes thunk { from { transform: rotate(-8deg) scale(1.8); opacity: 0 } }
-@keyframes spin { to { transform: rotate(360deg) } }
 
 @media (max-width: 1000px) {
   .sec { padding-block: 88px }

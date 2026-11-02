@@ -1,4 +1,4 @@
-export const SITE_URL = "https://squarebookai.com";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://squarebookai.com";
 export const SITE_NAME = "Squarebook";
 export const CONTACT_EMAIL = "support@squarebookai.com";
 

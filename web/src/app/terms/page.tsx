@@ -80,16 +80,20 @@ const SECTIONS: LegalSection[] = [
     title: "Pilot requests",
     body: (
       <>
-        <p>When you request a pilot or otherwise contact us through the Website:</p>
+        <p>
+          The &ldquo;Request a pilot&rdquo; form on the Website does not send or store what you type. It only checks your
+          entries in your browser and shows a confirmation on screen; nothing reaches us. To ask about a pilot, email us
+          at <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+        </p>
+        <p>When you contact us about a pilot:</p>
         <ul>
           <li>the information you give must be accurate, and you must be authorised to share it;</li>
           <li>
             you must not include any borrower&apos;s or customer&apos;s personal data, or any sensitive personal data or
-            information, in the form or in emails. Data for a pilot is shared only through a secure channel agreed in
-            writing;
+            information, in your emails. Data for a pilot is shared only through a secure channel agreed in writing;
           </li>
           <li>
-            submitting a request does not create a contract or oblige either party to proceed. We may decline a request at
+            asking about a pilot does not create a contract or oblige either party to proceed. We may decline a request at
             our discretion; and
           </li>
           <li>
@@ -108,7 +112,7 @@ const SECTIONS: LegalSection[] = [
         <ol>
           <li>use the Website for any unlawful, fraudulent or harmful purpose, or in breach of these Terms;</li>
           <li>impersonate any person or organisation, or misrepresent your affiliation with one;</li>
-          <li>send spam, or submit false, automated or bulk requests through the Website&apos;s forms;</li>
+          <li>submit false, automated or bulk entries through the Website&apos;s forms;</li>
           <li>
             scrape, crawl or copy the Website by automated means, except for search engines that follow our robots.txt
             file;
