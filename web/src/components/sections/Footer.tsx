@@ -43,7 +43,7 @@ export function Footer() {
         <span>squarebook</span>
       </div>
       <div className={`wrap ${s.legal}`}>
-        <span>© 2026 Squarebook</span>
+        <span>© 2026 Squarebook. All rights reserved.</span>
         <span>
           <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link> ·{" "}
           <Link href="/grievance">Grievance officer</Link>
